@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #4378e9;
+      --background-dark: #0f172a;
+      --background-light: #1e293b;
+      --text-light: #e2e8f0;
+    }
+
+    body {
+      background: var(--background-dark);
+      color: var(--text-light);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: var(--background-light);
+    }
+
+    .section {
+      padding: 100px 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .section:nth-child(even) {
+      background-color: var(--background-light);
+    }
+
+    .section:nth-child(odd) {
+      background-color: var(--background-dark);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background-color: #398ce4;
+    }
+
+    img.profile-pic {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .social-icons a {
+      color: var(--text-light);
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--primary-color);
+    }
+    
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <img src="image.jpg" alt="Profile Picture" class="profile-pic" />
+        </div>
+        <div class="col-md-6">
+          <h1 class="display-5">Hi, I'm Sambit Nag</h1>
+          <p class="lead">Web Developer passionate about modern design and interactivity.</p>
+          <p><i class="fas fa-envelope"></i> nagsambit64@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91-8327246327</p>
+          <p><i class="fas fa-location-dot"></i> Nabadwip, Nadia, West Bengal, India.</p>
+          <div class="social-icons">
+            <a href="https://github.com/SambitNag" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/code_with_nag1239" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/sambit-nag-552117301" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="your-resume-link.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 animate__animated animate__fadeInDown">About Me</h2>
+  
+      <p class="text-center animate__animated animate__fadeInUp animate__delay-1s">
+        Heyy!! My name is Sambit Nag. I am a Computer Science student with a strong interest in technology, programming, and financial markets. Alongside my academic journey, I am also an active trader, combining analytical thinking with market insights to make informed decisions. My passion lies in exploring how technology can enhance financial strategies, and I aim to bridge both fields by developing innovative tech-driven solutions in the future.
+      </p>
+  
+      <br>
+  
+      <p class="text-center animate__animated animate__fadeInUp animate__delay-2s">
+        I enjoy working on real-world projects using HTML, CSS, JavaScript, and PHP, while also exploring emerging technologies such as AI, quantum computing, and ethical hacking.
+      </p>
+  
+      <div class="row mt-5 justify-content-center text-center">
+        <div class="col-md-4 mb-4 d-flex flex-column align-items-center animate__animated animate__zoomIn animate__delay-3s">
+          <i class="fas fa-graduation-cap fa-3x mb-2 text-primary"></i>
+          <h6 class="mb-1">Education</h6>
+          <p class="mb-0 text-white">B.Sc in Computer Science</p>
+        </div>
+  
+        <div class="col-md-4 mb-4 d-flex flex-column align-items-center animate__animated animate__zoomIn animate__delay-4s">
+          <i class="fas fa-code fa-3x mb-2 text-primary"></i>
+          <h6 class="mb-1">Specialization</h6>
+          <p class="mb-0 text-white">Web Development</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Projects</h2>
+      <div class="row g-4">
+        <!-- Repeat this block for each project -->
+        <style>
+          .project-card {
+            background: var(--background-light);
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: var(--text-light);
+            box-shadow: 0 0 15px rgba(67, 120, 233, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+          }
+  
+          .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(67, 120, 233, 0.4);
+          }
+  
+          .project-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+          }
+  
+          .project-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+          }
+  
+          .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+          }
+  
+          .project-link:hover {
+            text-decoration: underline;
+          }
+        </style>
+  
+        <!-- Example Project -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-code project-icon"></i>
+            <h5 class="project-title">Portfolio Website</h5>
+            <p>A responsive personal portfolio using HTML, CSS & Bootstrap.</p>
+            <a href="https://your-project-link1.com" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-database project-icon"></i>
+            <h5 class="project-title">Inventory Manager</h5>
+            <p>CRUD system built with Node.js and MongoDB.</p>
+            <a href="https://sambitnag.github.io/cryptocurrency-website/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-mobile-alt project-icon"></i>
+            <h5 class="project-title">Weather App</h5>
+            <p>Weather forecasting app using OpenWeather API.</p>
+            <a href="https://sambitnag.github.io/weather/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fab fa-react project-icon"></i>
+            <h5 class="project-title">Task Tracker</h5>
+            <p>To-do app built with React.js and Firebase.</p>
+            <a href="https://sambitnag.github.io/Toast-Notification/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fab fa-js project-icon"></i>
+            <h5 class="project-title">Typing Game</h5>
+            <p>Fun typing speed test built with vanilla JavaScript.</p>
+            <a href="https://sambitnag.github.io/Qr-code/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-chart-line project-icon"></i>
+            <h5 class="project-title">Finance Tracker</h5>
+            <p>Track expenses and visualize data using Chart.js.</p>
+            <a href="https://sambitnag.github.io/Quote-Generator/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-user-shield project-icon"></i>
+            <h5 class="project-title">Auth System</h5>
+            <p>JWT-based secure login/register system in Express.js.</p>
+            <a href="https://sambitnag.github.io/music/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-laptop project-icon"></i>
+            <h5 class="project-title">Landing Page</h5>
+            <p>Business landing page with Bootstrap & modern UX.</p>
+            <a href="https://sambitnag.github.io/password/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card text-center h-100">
+            <i class="fas fa-robot project-icon"></i>
+            <h5 class="project-title">Chatbot UI</h5>
+            <p>Simple front-end chatbot interface using CSS animations.</p>
+            <a href="https://sambitnag.github.io/Quiz-App/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="certifications" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Certifications</h2>
+      <div class="row justify-content-center">
+        <!-- Certificate Item -->
+        <div class="col-md-6 col-lg-4 mb-3">
+          <a href="certificate.pdf" target="_blank" class="text-decoration-none">
+            <div class="card bg-dark text-light border-light h-100 certificate-card">
+              <div class="card-body d-flex align-items-center">
+                <i class="fas fa-certificate fa-2x me-3 text-primary"></i>
+                <div>
+                  <h6 class="mb-0">Web Development - Coursera</h6>
+                  <small class="text-muted">Click to view PDF</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-3">
+          <a href="certificate.pdf" target="_blank" class="text-decoration-none">
+            <div class="card bg-dark text-light border-light h-100 certificate-card">
+              <div class="card-body d-flex align-items-center">
+                <i class="fab fa-js fa-2x me-3 text-warning"></i>
+                <div>
+                  <h6 class="mb-0">JavaScript Essentials - Udemy</h6>
+                  <small class="text-muted">Click to view PDF</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <div class="col-md-6 col-lg-4 mb-3">
+          <a href="certificate.pdf" target="_blank" class="text-decoration-none">
+            <div class="card bg-dark text-light border-light h-100 certificate-card">
+              <div class="card-body d-flex align-items-center">
+                <i class="fas fa-laptop-code fa-2x me-3 text-info"></i>
+                <div>
+                  <h6 class="mb-0">Responsive Design - freeCodeCamp</h6>
+                  <small class="text-muted">Click to view PDF</small>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Animation CSS (add this inside your <style> tag) -->
+  <style>
+    .certificate-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(67, 120, 233, 0.3);
+    }
+  </style>
+  
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Skills</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Skill Item Template -->
+        <style>
+          .skill-card {
+            background: #1e293b;
+            border: none;
+            border-radius: 1rem;
+            padding: 1rem;
+            color: #e2e8f0;
+            box-shadow: 0 0 15px rgba(67, 120, 233, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+          }
+          .skill-card:hover {
+            transform: translateY(-5px);
+          }
+          .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #4378e9;
+            animation: pulse 1.5s infinite;
+          }
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+          }
+          .progress {
+            height: 10px;
+            background-color: #334155;
+          }
+          .progress-bar {
+            background-color: #4378e9;
+          }
+        </style>
+  
+        <!-- List of Skills -->
+        <!-- Example Skill -->
+        <!-- Repeat this column for each skill -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-html5 skill-icon"></i>
+            <h6>HTML</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 95%;"></div>
+            </div>
+            <small>95%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-css3-alt skill-icon"></i>
+            <h6>CSS</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <small>90%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-js skill-icon"></i>
+            <h6>JavaScript</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <small>85%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-react skill-icon"></i>
+            <h6>React</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <small>80%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-bootstrap skill-icon"></i>
+            <h6>Bootstrap</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <small>90%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-git-alt skill-icon"></i>
+            <h6>Git</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <small>80%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-node-js skill-icon"></i>
+            <h6>Node.js</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+            <small>70%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-php skill-icon"></i>
+            <h6>PHP</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <small>75%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fas fa-database skill-icon"></i>
+            <h6>SQL</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <small>85%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-java skill-icon"></i>
+            <h6>Java</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <small>75%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fas fa-code skill-icon"></i>
+            <h6>C / C++</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <small>80%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-r-project skill-icon"></i>
+            <h6>Ruby</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 65%;"></div>
+            </div>
+            <small>65%</small>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-card">
+            <i class="fab fa-js-square skill-icon"></i>
+            <h6>TypeScript</h6>
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+            <small>70%</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <form class="w-50 mx-auto" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="12f0ac25-0036-41c3-86b0-ea852e4be15a">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 bg-dark text-light">
+    &copy; 2025 Sambit Nag. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
