@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Portfolio</title>
+  <title>Modern Portfolio-Sambit</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
@@ -63,7 +63,7 @@
       width: 100%;
       max-width: 250px;
       border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 15px rgb(4, 108, 236);
     }
 
     .social-icons a {
@@ -76,13 +76,60 @@
     .social-icons a:hover {
       color: var(--primary-color);
     }
-    
+
+    @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animated-heading {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #efe4e4;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards;
+  font-weight: bold;
+  color: #f7f1f1;
+}
+
+/* Zoom + fade + bounce animation */
+@keyframes zoomBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.profile-pic {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: zoomBounce 1.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">MyPortfolio</a>
+      <a class="navbar-brand" href="#home">MyPortfolio-Sambit Nag &#128522;</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -97,30 +144,87 @@
         </ul>
       </div>
     </div>
+    <style>
+              /* Navbar fade-down animation on load */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: fadeDown 1s ease-in-out;
+  transition: background-color 0.4s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+}
+
+/* Background color and shadow when scrolling */
+.navbar.scrolled {
+  background-color: #0d1b2a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Nav link hover animation */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+    </style>
+<script>
+    window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+  });
+</script>
+
   </nav>
 
-  <section id="home" class="section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center">
-          <img src="image.jpg" alt="Profile Picture" class="profile-pic" />
-        </div>
-        <div class="col-md-6">
-          <h1 class="display-5">Hi, I'm Sambit Nag</h1>
-          <p class="lead">Web Developer passionate about modern design and interactivity.</p>
-          <p><i class="fas fa-envelope"></i> nagsambit64@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +91-8327246327</p>
-          <p><i class="fas fa-location-dot"></i> Nabadwip, Nadia, West Bengal, India.</p>
-          <div class="social-icons">
-            <a href="https://github.com/SambitNag" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/code_with_nag1239" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/sambit-nag-552117301" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="your-resume-link.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
-          </div>
+  <section id="home" class="section animate-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center fade-in-left">
+        <img src="image.jpg" alt="Profile Picture" class="profile-pic" />
+      </div>
+      <div class="col-md-6 fade-in-right">
+        <h1 class="display-5 animated-heading">Hi, I'm Sambit Nag &#128522;</h1>
+        <br>
+        <p class="lead">Web Developer passionate about modern design and interactivity.</p>
+        <p><i class="fas fa-envelope"></i> nagsambit64@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +91-8327246327</p>
+        <p><i class="fas fa-location-dot"></i> Nabadwip, Nadia, West Bengal, India.</p>
+        <div class="social-icons">
+          <a href="https://github.com/SambitNag" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/code_with_nag1239" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/sambit-nag-552117301" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/1BYigw6PtK/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i></a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section id="about" class="section bg-dark text-white py-5">
     <div class="container">
@@ -205,7 +309,7 @@
             <i class="fas fa-code project-icon"></i>
             <h5 class="project-title">Portfolio Website</h5>
             <p>A responsive personal portfolio using HTML, CSS & Bootstrap.</p>
-            <a href="https://your-project-link1.com" target="_blank" class="project-link">View Project</a>
+            <a href="https://sambitnag.github.io/portfolio/" target="_blank" class="project-link">View Project</a>
           </div>
         </div>
   
@@ -360,7 +464,7 @@
             border-radius: 1rem;
             padding: 1rem;
             color: #e2e8f0;
-            box-shadow: 0 0 15px rgba(67, 120, 233, 0.2);
+            box-shadow: 0 0 15px rgba(3, 79, 244, 0.945);
             text-align: center;
             transition: transform 0.3s ease;
           }
@@ -374,7 +478,7 @@
             animation: pulse 1.5s infinite;
           }
           @keyframes pulse {
-            0% { transform: scale(1); }
+            0% { transform: scale(1.2); }
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
           }
@@ -538,8 +642,9 @@
   
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="text-center mb-4">Contact</h2>
-      <form class="w-50 mx-auto" action="https://api.web3forms.com/submit" method="POST">
+      <h2 class="text-center mb-4 contact-heading">Contact</h2>
+      <form class="w-50 mx-auto contact-form" action="https://api.web3forms.com/submit" method="POST">
+
         <input type="hidden" name="access_key" value="12f0ac25-0036-41c3-86b0-ea852e4be15a">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
@@ -556,6 +661,53 @@
         <button type="submit" class="btn btn-primary">Send</button>
       </form>
     </div>
+    <style>
+        /* Fade-in and slide for heading */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in and zoom for form */
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations */
+.contact-heading {
+  animation: fadeSlideDown 1s ease-out;
+}
+
+.contact-form {
+  animation: fadeZoomIn 1.2s ease-in-out;
+}
+
+/* Optional: Add transition to input elements */
+.contact-form input,
+.contact-form textarea {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+    </style>
   </section>
 
   <footer class="text-center p-4 bg-dark text-light">
